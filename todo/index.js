@@ -29,3 +29,10 @@ const handleCheckbox = (checkbox) => {
         checkbox.parentElement.style.textDecoration = 'none'
     }
 }
+
+const handleCleanup = () => {
+    const ul = document.getElementById('ul')
+    while (ul.hasChildNodes()) {
+        ul.firstChild.remove()
+    }
+}
