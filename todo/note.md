@@ -7,4 +7,6 @@ No styling required and even googling was allowed. I was so confident about it. 
 
 So, I did it again on my own. It's a simple TODO list app w/o any styling. It can simply add a `li` into `ul` with a `checkbox`. When it's checked, it strikes through its list. When the cleanup button is clicked, it removes all the lists. That's it. 
 
+<img src='./todo.png' />
+
 I'll practice other things in this repo. I hope it helps me build concrete fundamentals. 🚀
