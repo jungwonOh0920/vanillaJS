@@ -1,0 +1,27 @@
+.tabs-header {
+    display: flex;
+    background-color: lightgray;
+}
+
+.tabs-header button {
+    border: none;
+    padding: 12px;
+    background-color: lightgray;
+}
+
+.tabs-header .tab-button:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+.tabs-header .tab-button.active {
+    background-color: red;
+}
+
+.content {
+    display: none;
+}
+
+.content.selected {
+    display: block;
+}

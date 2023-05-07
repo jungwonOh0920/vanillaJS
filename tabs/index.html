@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabs</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div class="tabs-header">
+        <button id="defaultOpen" class="tab-button" onclick="showContent(event, 'html')">HTML</button>
+        <button class="tab-button" onclick="showContent(event, 'css')">CSS</button>
+        <button class="tab-button" onclick="showContent(event, 'js')">Javascript</button>
+    </div>
+    <div>
+        <div id='html' class="content">
+            <h2>HTML</h2>
+            <p>This is html content</p>
+        </div>
+        <div id='css' class="content">
+            <h2>CSS</h2>
+            <p>This is css content</p>
+        </div>
+        <div id='js' class="content">
+            <h2>Javascript</h2>
+            <p>This is js content</p>
+        </div>
+    </div>
+</body>
+
+</html>
