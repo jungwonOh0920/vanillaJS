@@ -4,4 +4,4 @@ I learned I was so lack of javascript fundamentals. So, I just created this repo
 <br> 
 It is nothing fancy, but just ugly(least stylied) javascript app. I'll add notes for each project about what I learned. 
 
-Check out the repo live!: https://jungwonoh0920.github.io/vanillaJS/
+Check out the repo live!: <link href='https://jungwonoh0920.github.io/vanillaJS/' href='_blank'>here</link>
