@@ -3,3 +3,5 @@ Few days ago from today, I had an interview for the front-end dev position. I wa
 I learned I was so lack of javascript fundamentals. So, I just created this repo for myself to keep up with my js knowledge from the bottom.
 <br> 
 It is nothing fancy, but just ugly(least stylied) javascript app. I'll add notes for each project about what I learned. 
+
+Check out the repo live!: https://jungwonoh0920.github.io/vanillaJS/
