@@ -1,5 +1,5 @@
 # Accordion 
-### I learned so much while I was doing this even though it takes just a little Javascript coding. Here is the things that I learned:
+### I learned so much while I was doing this even though it required just tiny bit of Javascript code. Here is the things that I learned:
 ---
 1. when we pass the event from the HTML file to JS, it should be exactly `event`, not like `e` or `evt`. 
 
@@ -36,3 +36,6 @@ Ex)
     For a more thorough and complex element query, querySelectorAll() often gets the job done, with the caveat being the list is static.<br>
 
     `getElementsByClassName()`: returns a list of items that is dynamically updated as the DOM is updated. When DOM is updated, it knows it. 
+
+Snippet of the accordion:
+<img src='./accordion.png'>
