@@ -7,11 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./index.js"></script>
     <title>Fetch!</title>
+    <style>
+        .content {
+            background-color: yellow;
+        }
+
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .loader {
+            width: 30px;
+            height: 30px;
+            border: 16px solid gray;
+            border-top: 16px solid red;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
     <button onclick="handleClick()">Fetch</button>
-    <div id="content">
+    <button onclick="handleClear()">Clear</button>
+    <div id="loader" class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <div id="content" class="content">
         <div>
             <p>
                 <span id="title"></span>
