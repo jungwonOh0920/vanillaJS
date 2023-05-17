@@ -3,23 +3,35 @@ const app = Vue.createApp({
         return {
             cart: 0,
             product: 'Socks',
-            image: './assets/images/socks_green.jpg',
+            brand: 'Vue Mastery',
             url: 'https://www.google.com',
-            inventory: 0,
-            onSale: true,
             details: ['50% cotton', '30% wool', '20% polyester'],
+            selectedVariantIdx: 0,
             variants: [
-                {id: 2234, color: 'green', image: './assets/images/socks_green.jpg'},
-                {id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg'}]
+                {id: 2234, color: 'green', image: './assets/images/socks_green.jpg', quantity: 50},
+                {id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg', quantity: 0}]
         }
     },
     methods: {
         addCart() {
-            console.log('this: ', this)
             this.cart++
         },
-        updateImage(newImage) {
-            this.image = newImage
+        decreaseCart() {
+            if (this.cart) this.cart--
+        },
+        updateVariant(idx) {
+            this.selectedVariantIdx = idx
+        }
+    },
+    computed: {
+        getTitle() {
+            return this.brand + ' ' + this.product
+        },
+        getImage() {
+            return this.variants[this.selectedVariantIdx].image
+        },
+        isInStock() {
+            return this.variants[this.selectedVariantIdx].quantity
         }
     }
 })
