@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Vue Practice</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="nav-bar"></div>
+
+        <div class="cart">Cart({{ cart }})</div>
+
+        <div class="product-display">
+            <div class="product-container">
+                <div class="product-image">
+                    <!-- image goes here -->
+                    <img v-bind:src="image">
+                </div>
+                <div class="product-info">
+                    <h1>{{ product }}</h1>
+                    <a v-bind:href="url" target="_blank">Google link</a>
+                    <p v-if="onSale">On Sale</p>
+                    <p v-if="inventory > 10">In stock</p>
+                    <p v-else-if="inventory <= 10 && inventory > 0">Running out of the stock</p>
+                    <p v-else>Out of stock</p>
+                    <ul>
+                        <li v-for="d in details">{{ d }}</li>
+                    </ul>
+
+                    <div v-for="variant in variants" :key="variant.id" @mouseover="updateImage(variant.image)">{{
+                        variant.color }}</div>
+
+                    <button v-on:click="addCart" class="button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import Js -->
+    <script src="./main.js"></script>
+
+    <!-- Mount App -->
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+</body>
+
+</html>
