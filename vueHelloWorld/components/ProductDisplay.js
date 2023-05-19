@@ -29,13 +29,12 @@ app.component('product-display', {
                     <button v-on:click="addCart" class="button" :class="{disabledButton: !isInStock}"
                         :disabled="!isInStock">Add to
                         Cart</button>
-                    <button v-on:click="decreaseCart" class="button">Take one off</button>
+                    <button v-on:click="decreaseCart" class="button">Subtract</button>
                 </div>
             </div>
         </div>`,
     data() {
         return {
-            cart: 0,
             product: 'Socks',
             brand: 'Vue Mastery',
             url: 'https://www.google.com',
@@ -48,7 +47,10 @@ app.component('product-display', {
     },
     methods: {
         addCart() {
-            this.cart++
+            this.$emit('add-to-cart')
+        },
+        decreaseCart() {
+            this.$emit('subtract-from-cart')
         },
         updateVariant(idx) {
             this.selectedVariantIdx = idx
