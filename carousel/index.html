@@ -23,12 +23,12 @@
             <span>3/3</span>
             <img src="https://source.unsplash.com/oiPgftwdIeU">
         </div>
-        <button class="left-button" onClick="decreaseSlideIdx()">&lt;</button>
-        <button class="right-button" onClick="increaseSlideIdx()">&gt;</button>
+        <button class="left-button" onclick="decreaseSlideIdx()">&lt;</button>
+        <button class="right-button" onclick="increaseSlideIdx()">&gt;</button>
         <div class="dots">
-            <span class="dot">&#x2022;</span>
-            <span class="dot">&#x2022;</span>
-            <span class="dot">&#x2022;</span>
+            <span class="dot" onclick="showSlide(0)">&#x2022;</span>
+            <span class="dot" onclick="showSlide(1)">&#x2022;</span>
+            <span class="dot" onclick="showSlide(2)">&#x2022;</span>
         </div>
     </div>
     <script src="./index.js"></script>
