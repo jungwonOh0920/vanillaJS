@@ -6,19 +6,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .side-nav {
+            background-color: #111;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+            padding-left: 8px;
+        }
+
+        .side-nav a,
+        .side-nav h2 {
+            color: #818181;
+        }
+
+        .side-nav a:hover {
+            color: white;
+        }
+
+        main {
+            margin-left: 168px;
+        }
+    </style>
 </head>
 
 <body>
-    <ul>
+    <div class="side-nav">
+        <h2>Buttons</h2>
+        <li><a href="./changeBg/index.html" target="_blank">ChangeBg</a></li>
+        <li><a href="./fetch/" target="_blank">Fetch API</a></li>
         <li><a href="./todo/index.html" target="_blank">TODO</a></li>
-        <li><a href="./changeBg/index.html" target="_blank">changeBg</a></li>
-        <li><a href="./tabs/index.html" target="_blank">Tabs</a></li>
-        <li><a href="./accordion/" target="_blank">Accordion</a></li>
-        <li><a href="./fetch/" target="_blank">FetchAPI</a></li>
-        <li><a href="./vueHelloWorld/" target="_blank">Vue Hello World</a></li>
+
+        <h2>Images</h2>
         <li><a href="./carousel/" target="_blank">Carousel</a></li>
-        <a>Or something else!</a>
-    </ul>
+
+        <h2>Menus</h2>
+        <li><a href="./accordion/" target="_blank">Accordion</a></li>
+        <li><a href="./tabs/index.html" target="_blank">Tabs</a></li>
+
+        <h2>Other</h2>
+        <li><a href="./vueHelloWorld/" target="_blank">Vue Intro</a></li>
+    </div>
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illo aliquam numquam molestias harum eius
+            nemo voluptatibus quidem quo dolor, earum odio a dicta tempora nihil provident cupiditate placeat voluptatem
+            beatae ipsum debitis minus, dolore, odit voluptate! Provident eaque minus in nobis labore esse voluptatem,
+            sapiente delectus quas quisquam eveniet ex sequi fugiat quibusdam nulla ut soluta commodi quis? Quasi porro
+            molestias ab tempore? At nemo esse delectus dolore deserunt quod, vel libero corporis adipisci, distinctio,
+            eius neque illum. Tempore, nisi quod. Accusantium quos doloremque excepturi ut, accusamus sunt quia soluta
+            ipsum suscipit laborum perspiciatis qui maxime harum magni reprehenderit!</p>
+        <!-- <ul>
+            <li><a href="./todo/index.html" target="_blank">TODO</a></li>
+            <li><a href="./changeBg/index.html" target="_blank">changeBg</a></li>
+            <li><a href="./tabs/index.html" target="_blank">Tabs</a></li>
+            <li><a href="./accordion/" target="_blank">Accordion</a></li>
+            <li><a href="./fetch/" target="_blank">FetchAPI</a></li>
+            <li><a href="./vueHelloWorld/" target="_blank">Vue Hello World</a></li>
+            <li><a href="./carousel/" target="_blank">Carousel</a></li>
+            <a>Or something else!</a>
+        </ul> -->
+    </main>
 </body>
 
 </html>
