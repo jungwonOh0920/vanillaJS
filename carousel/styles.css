@@ -1,0 +1,44 @@
+.carousel-container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+}
+
+.carousel-container .left-button {
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.carousel-container .right-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.carousel-container .dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+}
+
+.slide-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-container span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 24px;
+}
