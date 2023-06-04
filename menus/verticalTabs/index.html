@@ -5,51 +5,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style></style>
+    <title>verticalTabs</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab {
+            float: left;
+            width: 30%;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            display: block;
+            width: 100%;
+            padding: 12px 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .tab button.active {
+            background-color: red;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+    </style>
 </head>
 
-<body onload="init()">
-    <div>
-        <div class="tab">
-            <button>Jay</button>
-            <button>Jessie</button>
-            <button>Dara</button>
-            <button>Mui</button>
-        </div>
-        <div class="tab-content">
-            <h3>Jay</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit et odit iure laudantium, recusandae
-                expedita perferendis veritatis deleniti? Doloremque mollitia voluptate pariatur sunt sapiente officia
-                ipsam ea a sed autem dolorum, aperiam expedita, quod dolores illum quibusdam obcaecati, ipsum quae non
-                assumenda. Et, commodi ab fugiat temporibus vel suscipit voluptate?</p>
-        </div>
-        <div class="tab-content">
-            <h3>Jessie</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit et odit iure laudantium, recusandae
-                expedita perferendis veritatis deleniti? Doloremque mollitia voluptate pariatur sunt sapiente officia
-                ipsam ea a sed autem dolorum, aperiam expedita, quod dolores illum quibusdam obcaecati, ipsum quae non
-                assumenda. Et, commodi ab fugiat temporibus vel suscipit voluptate?</p>
-        </div>
-        <div class="tab-content">
-            <h3>Dara</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit et odit iure laudantium, recusandae
-                expedita perferendis veritatis deleniti? Doloremque mollitia voluptate pariatur sunt sapiente officia
-                ipsam ea a sed autem dolorum, aperiam expedita, quod dolores illum quibusdam obcaecati, ipsum quae non
-                assumenda. Et, commodi ab fugiat temporibus vel suscipit voluptate?</p>
-        </div>
-        <div class="tab-content">
-            <h3>Mui</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit et odit iure laudantium, recusandae
-                expedita perferendis veritatis deleniti? Doloremque mollitia voluptate pariatur sunt sapiente officia
-                ipsam ea a sed autem dolorum, aperiam expedita, quod dolores illum quibusdam obcaecati, ipsum quae non
-                assumenda. Et, commodi ab fugiat temporibus vel suscipit voluptate?</p>
-        </div>
+<body>
+    <div class="tab">
+        <button class="tab-btn" onclick="showContent('jay')">Jay</button>
+        <button class="tab-btn" onclick="showContent('jessie')">Jessie</button>
+        <button class="tab-btn" onclick="showContent('dara')">Dara</button>
+        <button class="tab-btn" onclick="showContent('mui')">Mui</button>
+    </div>
+    <div class="tab-content" id="jay">
+        <h3>Jay</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis aliquam tempora eius veniam
+            consequuntur reiciendis accusantium, beatae inventore! Ab laboriosam, sed placeat repudiandae beatae
+            eaque odit aut et modi, velit mollitia adipisci vel alias! Fugit, velit omnis nostrum natus, ex impedit
+            dolores voluptatem mollitia quis hic tenetur accusantium consectetur perferendis illo. Ipsam, doloremque
+            sunt. Porro laborum ipsam, iste deserunt eligendi eveniet quisquam consequatur tempore. Minima porro
+            ipsam pariatur molestiae vitae itaque blanditiis cum obcaecati adipisci, sapiente quia, aperiam, unde
+            totam enim. Alias, labore repellendus enim omnis praesentium incidunt impedit, sed dolorem quis vitae
+            officiis accusamus, dolores laboriosam aspernatur libero quod.</p>
+    </div>
+    <div class="tab-content" id="jessie">
+        <h3>Jessie</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ut totam nam, consequuntur perferendis
+            adipisci perspiciatis accusamus aliquid ad eligendi.</p>
+    </div>
+    <div class="tab-content" id="dara">
+        <h3>Dara</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nisi aut quis labore provident, distinctio
+            ad ut quidem exercitationem impedit ab quae incidunt quo et suscipit natus architecto quos soluta
+            obcaecati nulla, odit officiis minus? Earum, eos. Doloremque, dolores officia! Voluptatum dicta ex
+            labore repudiandae aperiam nulla blanditiis, sequi est illum quia expedita nisi veniam ipsa sed aliquid
+            architecto, tempore dolorum repellendus! Aliquid velit sunt dolores consequatur reprehenderit possimus
+            saepe repellendus provident quidem quo. Officiis corporis dolores pariatur quisquam, excepturi ipsum
+            minima cum fugit? Unde natus quisquam, expedita deserunt praesentium, sit voluptate error temporibus
+            ipsam culpa explicabo autem impedit itaque.</p>
+    </div>
+    <div class="tab-content" id="mui">
+        <h3>Mui</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit et odit iure laudantium, recusandae
+            expedita perferendis veritatis deleniti? Doloremque mollitia voluptate pariatur sunt sapiente officia
+            ipsam ea a sed autem dolorum, aperiam expedita, quod dolores illum quibusdam obcaecati, ipsum quae non
+            assumenda. Et, commodi ab fugiat temporibus vel suscipit voluptate?</p>
     </div>
     <script>
-        const init = () => {
-            alert('still working on it...')
+        let index = 0
+
+        const showContent = (id) => {
+            const tabContents = document.getElementsByClassName('tab-content')
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active')
+
+                if (id == tabContents[i].id) {
+                    console.log('found it!')
+                    index = i
+                }
+            }
+            const currContent = document.getElementById(id)
+            currContent.classList.add('active')
+
+            // update selected button bg color
         }
+
+        showContent('jay')
     </script>
 </body>
 
