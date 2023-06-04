@@ -92,19 +92,19 @@
     <div class="side-nav">
         <button class="home-btn" onclick="goHome()">Home</button>
         <h2>Buttons</h2>
-        <button class="menu-item" onclick="show('fetch')">Fetch API</button>
-        <button class="menu-item" onclick="show('changeBg')">ChangeBg</button>
-        <button class="menu-item" onclick="show('todo')">TODO</button>
+        <button class="menu-item" onclick="show('buttons','fetch')">Fetch API</button>
+        <button class="menu-item" onclick="show('buttons','changeBg')">ChangeBg</button>
+        <button class="menu-item" onclick="show('buttons', 'todo')">TODO</button>
 
         <h2>Images</h2>
-        <button class="menu-item" onclick="show('carousel')">Carousel</button>
+        <button class="menu-item" onclick="show('images','carousel')">Carousel</button>
 
         <h2>Menus</h2>
-        <button class="menu-item" onclick="show('accordion')">Accordion</button>
-        <button class="menu-item" onclick="show('tabs')">Tabs</button>
+        <button class="menu-item" onclick="show('menus','accordion')">Accordion</button>
+        <button class="menu-item" onclick="show('menus','tabs')">Tabs</button>
 
         <h2>Other</h2>
-        <button class="menu-item" onclick="show('vueHelloWorld')">Vue Intro</button>
+        <button class="menu-item" onclick="show('other','vueHelloWorld')">Vue Intro</button>
     </div>
     <main class="main">
         <div class="intro">
@@ -127,30 +127,20 @@
             </p>
         </div>
         <div class="content"></div>
-        <!-- <ul>
-            <li><a href="./todo/index.html" target="_blank">TODO</a></li>
-            <li><a href="./changeBg/index.html" target="_blank">changeBg</a></li>
-            <li><a href="./tabs/index.html" target="_blank">Tabs</a></li>
-            <li><a href="./accordion/" target="_blank">Accordion</a></li>
-            <li><a href="./fetch/" target="_blank">FetchAPI</a></li>
-            <li><a href="./vueHelloWorld/" target="_blank">Vue Hello World</a></li>
-            <li><a href="./carousel/" target="_blank">Carousel</a></li>
-            <a>Or something else!</a>
-        </ul> -->
     </main>
     <script>
-        const introEle = document.getElementsByClassName('intro')[0]
-        introEle.classList.add('active')
+        const introElement = document.getElementsByClassName('intro')[0]
+        introElement.classList.add('active')
 
-        const show = (fileName) => {
+        const show = (category, fileName) => {
             const contentElement = document.getElementsByClassName('content')[0]
-            const introEle = document.getElementsByClassName('intro')[0].classList.remove('active')
-            contentElement.innerHTML = `<object type="text/html" data="./${fileName}/index.html"></object>`
+            const introElement = document.getElementsByClassName('intro')[0].classList.remove('active')
+            contentElement.innerHTML = `<iframe height="100%" width="100%" src="./${category}/${fileName}/index.html"></iframe>`
             contentElement.classList.toggle('active')
         }
 
         const goHome = () => {
-            const introEle = document.getElementsByClassName('intro')[0].classList.add('active')
+            const introElement = document.getElementsByClassName('intro')[0].classList.add('active')
             const contentElement = document.getElementsByClassName('content')[0]
             contentElement.innerHTML = ''
         }
