@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>verticalTabs</title>
     <style>
-        body {
+        body,
+        h3 {
             margin: 0;
         }
 
@@ -26,7 +27,7 @@
             background-color: #f1f1f1;
         }
 
-        .tab button {
+        .tab .tab-btn {
             display: block;
             width: 100%;
             padding: 12px 16px;
@@ -34,11 +35,8 @@
             cursor: pointer;
         }
 
-        .tab button.active {
-            background-color: red;
-        }
-
-        .tab button:hover {
+        .tab .tab-btn.active,
+        .tab .tab-btn:hover {
             background-color: #ddd;
         }
     </style>
@@ -46,12 +44,12 @@
 
 <body>
     <div class="tab">
-        <button class="tab-btn" onclick="showContent('jay')">Jay</button>
-        <button class="tab-btn" onclick="showContent('jessie')">Jessie</button>
-        <button class="tab-btn" onclick="showContent('dara')">Dara</button>
-        <button class="tab-btn" onclick="showContent('mui')">Mui</button>
+        <button class="tab-btn active" onclick="showContent(event, 'jay')">Jay</button>
+        <button class="tab-btn" onclick="showContent(event, 'jessie')">Jessie</button>
+        <button class="tab-btn" onclick="showContent(event, 'dara')">Dara</button>
+        <button class="tab-btn" onclick="showContent(event, 'mui')">Mui</button>
     </div>
-    <div class="tab-content" id="jay">
+    <div class="tab-content active" id="jay">
         <h3>Jay</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis aliquam tempora eius veniam
             consequuntur reiciendis accusantium, beatae inventore! Ab laboriosam, sed placeat repudiandae beatae
@@ -88,23 +86,24 @@
     <script>
         let index = 0
 
-        const showContent = (id) => {
+        const showContent = (event, id) => {
+            const tabButtons = document.getElementsByClassName('tab-btn')
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active')
+            }
+            event.target.classList.add('active')
+
             const tabContents = document.getElementsByClassName('tab-content')
             for (let i = 0; i < tabContents.length; i++) {
                 tabContents[i].classList.remove('active')
 
                 if (id == tabContents[i].id) {
-                    console.log('found it!')
                     index = i
                 }
             }
             const currContent = document.getElementById(id)
             currContent.classList.add('active')
-
-            // update selected button bg color
         }
-
-        showContent('jay')
     </script>
 </body>
 
