@@ -1,38 +1,33 @@
-const handleClick = () => {
-    const input = document.getElementById('input')
-    const ul = document.getElementById('ul')
+const handleSubmit = () => {
+    const input = document.getElementById('todo')
 
-    // create list
-    const li = document.createElement('li')
-    const checkbox = document.createElement('input')
-    checkbox.setAttribute('type', 'checkbox')
-
-    // handle checkbox click
-    checkbox.onclick = () => {
-        handleCheckbox(checkbox)
+    if (!input) {
+        alert('cannot take an empty string')
+        return
     }
 
-    // append
-    li.appendChild(document.createTextNode(input.value))
-    li.appendChild(checkbox)
-    ul.appendChild(li)
+    const listContainer = document.getElementById('to-do-list')
 
-    // clean input & re-focus
+    const list = document.createElement('li')
+    const checkbox = document.createElement('input')
+
+    checkbox.type = 'checkbox'
+
+    // add event listener for check and uncheck
+    checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+            list.classList.add('done')
+        } else {
+            list.classList.remove('done')
+        }
+    })
+
+    list.appendChild(document.createTextNode(input.value))
+    list.appendChild(checkbox)
+
+    listContainer.appendChild(list)
+
+    // clear the input
     input.value = ''
     input.focus()
-}
-
-const handleCheckbox = (checkbox) => {
-    if (checkbox.checked) {
-        checkbox.parentElement.style.textDecoration = 'line-through'
-    } else {
-        checkbox.parentElement.style.textDecoration = 'none'
-    }
-}
-
-const handleCleanup = () => {
-    const ul = document.getElementById('ul')
-    while (ul.hasChildNodes()) {
-        ul.firstChild.remove()
-    }
 }
