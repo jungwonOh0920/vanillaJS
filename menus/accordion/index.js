@@ -1,11 +1,10 @@
-const handleClick = (contentId) => {
+const handleClick = (e) => {
+    const contentEle = e.target.parentElement.nextElementSibling
+    contentEle.classList.toggle('active')
 
-    const contents = document.getElementsByClassName('content')
-
-    for (let i = 0; i < contents.length; i++) {
-        contents[i].classList.remove('active')
+    if (contentEle.classList.contains('active')) {
+        e.target.innerHTML = '&or;'
+    } else {
+        e.target.innerHTML = '&and;'
     }
-
-    const targetContent = document.getElementById(contentId)
-    targetContent.classList.toggle('active')
 }
