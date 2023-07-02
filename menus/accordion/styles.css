@@ -1,17 +1,21 @@
 .title {
-    border: none;
-    background-color: lightgray;
-    cursor: pointer;
-    width: 100%;
+    background-color: yellow;
 }
 
 .content {
-    height: 0;
+    max-height: 0;
+    transition: max-height 1s ease-in-out;
     overflow: hidden;
-    background-color: yellow;
-    transition: height 0.3s ease-out;
+    background-color: red;
 }
 
 .content.active {
-    height: 100px;
+    max-height: 500px;
+    transition: max-height 1s;
+}
+
+.icon {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
