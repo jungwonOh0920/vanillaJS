@@ -1,27 +1,25 @@
-.tabs-header {
+.tabs {
+    background-color: lightgray;
     display: flex;
-    background-color: lightgray;
 }
 
-.tabs-header button {
+.tab {
+    padding: 12px 14px;
     border: none;
-    padding: 12px;
-    background-color: lightgray;
-}
-
-.tabs-header .tab-button:hover {
-    background-color: darkgray;
+    background-color: transparent;
     cursor: pointer;
 }
 
-.tabs-header .tab-button.active {
+.tab:hover,
+.tab.active {
     background-color: darkgray;
+    color: white;
 }
 
 .content {
     display: none;
 }
 
-.content.selected {
+.content.active {
     display: block;
 }
