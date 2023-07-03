@@ -1,25 +1,19 @@
-const showContent = (event, title) => {
+const handleClick = (e, contentId) => {
+    const contents = document.getElementsByClassName('content')
+    const tabButtons = document.getElementsByClassName('tab')
 
-    // reset tab header: remove active className
-    const tab_buttons = document.getElementsByClassName('tab-button')
-    for (let i = 0; i < tab_buttons.length; i++) {
-        tab_buttons[i].classList.remove('active')
-        // tab_buttons[i].className = tab_buttons[i].className.replace(' active', '')
-    }
-    event.target.className += ' active'
+    for (let i = 0; i < contents.length; i++) {
+        // remove all contents first
+        contents[i].classList.remove('active')
 
-    // reset display none to all contents before show the selected
-    const all_contents = document.getElementsByClassName('content')
-
-    for (let i = 0; i < all_contents.length; i++) {
-        const curr = all_contents[i]
-        curr.style.display = 'none'
+        // reset all tab
+        tabButtons[i].classList.remove('active')
     }
 
-    const curr_content = document.getElementById(title)
-    curr_content.style.display = 'block'
+    // change bg color for the target button
+    e.target.classList.add('active')
+
+    // display by adding a classname
+    const targetContent = document.getElementById(contentId)
+    targetContent.classList.add('active')
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('defaultOpen').click()
-})
