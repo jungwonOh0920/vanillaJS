@@ -1,37 +1,39 @@
-.modal {
+.modal-container {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    background-color: gray;
     display: none;
 }
 
-.modal.active {
+.modal-container.active {
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-h3 {
-    margin: 0;
-}
-
-.modal-title {
-    display: flex;
-    justify-content: space-between;
-}
-
-.modal-title button {
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
+    align-items: center;
 }
 
 .modal-content {
-    max-width: 400px;
-    border: 1px solid red;
-    padding: 20px;
+    background-color: white;
+    width: 450px;
+    padding: 12px;
+}
+
+.modal-head {
+    border-bottom: 1px solid blue;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 0 -12px;
+}
+
+.modal-head button {
+    float: right;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.modal-body {
+    margin-top: 8px;
 }
