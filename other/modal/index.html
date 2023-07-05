@@ -10,25 +10,24 @@
 </head>
 
 <body>
-    <button onclick="toggleModal()">Open modal</button>
-    <div class="modal">
+    <div class="modal-container">
         <div class="modal-content">
-            <div class="modal-title">
-                <h3>modal title</h3>
+            <div class="modal-head">
+                <span>Title</span>
                 <button onclick="toggleModal()">X</button>
             </div>
-            <div class="modal-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, praesentium!
-                Libero optio asperiores fuga aperiam cumque labore, modi laboriosam dignissimos inventore rerum.
-                Inventore dolorum tempora magni non facere modi aspernatur, veniam adipisci. Tenetur tempora veritatis a
-                perspiciatis adipisci ipsam dolorum?</div>
+            <div class="modal-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis ex deserunt,
+                officia qui odit ipsam id commodi distinctio ratione quidem ea unde deleniti illo, voluptatum, doloribus
+                ullam voluptates eligendi non labore neque assumenda sit. Fugiat totam voluptatum ab labore similique
+                debitis accusamus at amet reprehenderit laudantium numquam distinctio dolor nihil id placeat,
+                voluptatibus omnis vitae consequatur natus eaque, veritatis tenetur possimus? Cumque voluptatem,
+                delectus illo et nobis est, eius mollitia asperiores maxime perferendis totam. Vitae iusto ipsam totam
+                temporibus porro nihil modi! Inventore unde tempora saepe quam? Dolorum aperiam qui beatae accusantium
+                eaque nostrum nesciunt porro ad tempore, expedita error!</div>
         </div>
     </div>
-    <script>
-        const toggleModal = () => {
-            const modal = document.getElementsByClassName('modal')[0]
-            modal.classList.toggle('active')
-        }
-    </script>
+    <button onclick="toggleModal()">Open modal</button>
+    <script src="./index.js"></script>
 </body>
 
 </html>
