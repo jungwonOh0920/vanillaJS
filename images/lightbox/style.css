@@ -21,6 +21,7 @@ img {
     left: 0;
     right: 0;
     background-color: black;
+    color: white;
 }
 
 .modal-container.active {
@@ -51,6 +52,7 @@ img {
 .modal-content {
     width: 100%;
     max-width: 1000px;
+    height: 600px;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -69,8 +71,6 @@ img {
 
 .slide img {
     width: 100%;
-    height: auto;
-    /* flex: 1; */
 }
 
 .navigator {
@@ -93,4 +93,8 @@ img {
 
 .navigator.right {
     right: 24px;
+}
+
+.img-desc {
+    text-align: center;
 }

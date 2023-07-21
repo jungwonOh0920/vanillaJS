@@ -26,13 +26,17 @@ const moveRight = () => {
 // handle slides
 let currSlideIdx = 0
 const showSlide = (idx) => {
-    console.log('showSlide called: ', idx);
+    // display none for all slides
     const slides = document.getElementsByClassName('slide')
-    // display none for all
+
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = 'none'
     }
 
     // display block for the current slide idx
     slides[idx].style.display = 'block'
+
+    // handle description
+    const description = document.getElementsByClassName('img-desc')[0]
+    description.innerHTML = slides[idx].children.item(1).alt
 }
