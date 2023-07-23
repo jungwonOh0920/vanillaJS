@@ -12,28 +12,30 @@
     <h1>lightbox</h1>
     <p>click an image to see the modal.</p>
     <div class="image-container">
-        <div class="col" onclick="toggleModal()">
-            <img src="./images/img_lights_wide.jpg" alt="lights">
+        <div class="col" onclick="openModal(0)">
+            <img class="img" src="./images/img_lights_wide.jpg" alt="lights">
         </div>
-        <div class="col" onclick="toggleModal()">
-            <img src="./images/img_mountains.jpg" alt="mountains">
+        <div class="col" onclick="openModal(1)">
+            <img class="img" src="./images/img_mountains.jpg" alt="mountains">
         </div>
-        <div class="col" onclick="toggleModal()">
-            <img src="./images/img_nature.jpg" alt="nature">
+        <div class="col" onclick="openModal(2)">
+            <img class="img" src="./images/img_nature.jpg" alt="nature">
         </div>
-        <div class="col" onclick="toggleModal()">
-            <img src="./images/img_snow.jpg" alt="snow">
+        <div class="col" onclick="openModal(3)">
+            <img class="img" src="./images/img_snow.jpg" alt="snow">
         </div>
     </div>
     <div class="modal-container">
         <div class="modal">
-            <button class="close" onclick="toggleModal()">&times;</button>
+            <button class="close" onclick="closeModal()">&times;</button>
             <div class="slider">
                 <div class="slider-img-container">
-                    <img src="./images/img_lights_wide.jpg" alt="lights">
-                    <button class="moveLeftBtn">&#10094;</button>
-                    <button class="moveRightBtn">&#10095;</button>
+                    <img class='slide-img' src="./images/img_lights_wide.jpg">
+                    <button class="moveLeftBtn" onclick="moveLeft()">&#10094;</button>
+                    <button class="moveRightBtn" onclick="moveRight()">&#10095;</button>
+                    <span class="current-num">1/4</span>
                 </div>
+                <p class="slider-desc"></p>
             </div>
         </div>
     </div>

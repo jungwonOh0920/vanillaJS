@@ -48,16 +48,17 @@
     color: red;
 }
 
-.slider {
-    background-color: red;
-}
-
 .slider-img-container {
     max-width: 700px;
+    height: 400px;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
     position: relative;
+}
+
+.slide-img {
+    width: 100%;
 }
 
 .moveLeftBtn {
@@ -70,4 +71,14 @@
     position: absolute;
     top: 50%;
     right: 4px;
+}
+
+.slider-desc {
+    text-align: center;
+}
+
+.current-num {
+    position: absolute;
+    top: 4px;
+    left: 4px;
 }
