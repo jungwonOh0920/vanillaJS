@@ -11,50 +11,49 @@
 <body>
     <h1>lightbox</h1>
     <p>click an image to see the modal.</p>
-    <div class="row">
-        <div class="column" onclick="handleImgClick(0)"><img src="./images/img_lights_wide.jpg" />
+    <div class="image-container">
+        <div class="col" onclick="openModal(0)">
+            <img class="img" src="./images/img_lights_wide.jpg" alt="lights">
         </div>
-        <div class="column" onclick="handleImgClick(1)"><img src="./images/img_mountains.jpg" /></div>
-        <div class="column" onclick="handleImgClick(2)"><img src="./images/img_nature.jpg" />
+        <div class="col" onclick="openModal(1)">
+            <img class="img" src="./images/img_mountains.jpg" alt="mountains">
         </div>
-        <div class="column" onclick="handleImgClick(3)"><img src="./images/img_snow.jpg" />
+        <div class="col" onclick="openModal(2)">
+            <img class="img" src="./images/img_nature.jpg" alt="nature">
+        </div>
+        <div class="col" onclick="openModal(3)">
+            <img class="img" src="./images/img_snow.jpg" alt="snow">
         </div>
     </div>
     <div class="modal-container">
-        <div class="modal-inner-container">
-            <button class="exit" onclick="handleExit()">&times;</button>
-            <button class="navigator left" onclick="moveLeft()">&#10094;</button>
-            <button class="navigator right" onclick="moveRight()">&#10095;</button>
-            <div class="modal-content">
-                <div class="slide">
-                    <div class="number">1 / 4</div>
-                    <img src="./images/img_lights_wide.jpg" alt="Northern lights" />
+        <div class="modal">
+            <button class="close" onclick="closeModal()">&times;</button>
+            <div class="slider">
+                <div class="slider-img-container">
+                    <img class='slide-img' src="./images/img_lights_wide.jpg">
+                    <button class="moveLeftBtn" onclick="moveLeft()">&#10094;</button>
+                    <button class="moveRightBtn" onclick="moveRight()">&#10095;</button>
+                    <span class="current-num"></span>
                 </div>
-                <div class="slide">
-                    <div class="number">2 / 4</div>
-                    <img src="./images/img_mountains.jpg" alt="Mountains" />
-                </div>
-                <div class="slide">
-                    <div class="number">3 / 4</div>
-                    <img src="./images/img_nature.jpg" alt="Nature and sunrinse" />
-                </div>
-                <div class="slide">
-                    <div class="number">4 / 4</div>
-                    <img src="./images/img_snow.jpg" alt="Snow on mountains" />
-                </div>
+                <p class="slider-desc"></p>
             </div>
-            <p class="img-desc"></p>
-            <div class="row">
-                <div class="column" onclick="handleImgClick(0)"><img src="./images/img_lights_wide.jpg" />
+            <div class="image-container">
+                <div class="col" onclick="openModal(0)">
+                    <img class="modal-img-gallery" src="./images/img_lights_wide.jpg" alt="lights">
                 </div>
-                <div class="column" onclick="handleImgClick(1)"><img src="./images/img_mountains.jpg" /></div>
-                <div class="column" onclick="handleImgClick(2)"><img src="./images/img_nature.jpg" />
+                <div class="col" onclick="openModal(1)">
+                    <img class="modal-img-gallery" src="./images/img_mountains.jpg" alt="mountains">
                 </div>
-                <div class="column" onclick="handleImgClick(3)"><img src="./images/img_snow.jpg" />
+                <div class="col" onclick="openModal(2)">
+                    <img class="modal-img-gallery" src="./images/img_nature.jpg" alt="nature">
+                </div>
+                <div class="col" onclick="openModal(3)">
+                    <img class="modal-img-gallery" src="./images/img_snow.jpg" alt="snow">
                 </div>
             </div>
         </div>
-        <script src="./index.js"></script>
+    </div>
+    <script src="./index.js"></script>
 </body>
 
 </html>
