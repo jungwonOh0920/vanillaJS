@@ -9,6 +9,8 @@ const changeImg = () => {
     SlideImg.alt = images[imageIdx].alt
 
     document.getElementsByClassName('slider-desc')[0].innerHTML = SlideImg.alt
+
+    document.getElementsByClassName('current-num')[0].innerHTML = imageIdx + 1 + '/' + IMG_SOURCES.length
 }
 
 const openModal = (idx) => {
