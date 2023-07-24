@@ -82,3 +82,15 @@
     bottom: 4px;
     left: 4px;
 }
+
+.modal-container .modal .col img {
+    opacity: 0.6;
+}
+
+.modal-container .modal .col img:hover {
+    opacity: 1;
+}
+
+.modal-container .modal .col img.active {
+    opacity: 1;
+}

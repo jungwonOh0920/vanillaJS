@@ -11,6 +11,15 @@ const changeImg = () => {
     document.getElementsByClassName('slider-desc')[0].innerHTML = SlideImg.alt
 
     document.getElementsByClassName('current-num')[0].innerHTML = imageIdx + 1 + '/' + IMG_SOURCES.length
+
+    // handle lightbox
+    const imgGallery = document.getElementsByClassName('modal-img-gallery')
+
+    for (let i = 0; i < IMG_SOURCES.length; i++) {
+        imgGallery[i].classList.remove('active')
+    }
+
+    imgGallery[imageIdx].classList.add('active')
 }
 
 const openModal = (idx) => {
