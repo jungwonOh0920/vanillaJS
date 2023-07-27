@@ -1,0 +1,125 @@
+iframe {
+    border: none;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    color: #818181;
+}
+
+h2 {
+    margin: 0;
+}
+
+.home-btn {
+    padding: 8px 12px;
+    color: #818181;
+    background-color: #111;
+    font-size: 1.8em;
+    text-align: left;
+    border: none;
+}
+
+.menu-item {
+    padding: 8px 12px;
+    color: #818181;
+    background-color: #111;
+    border: none;
+    text-align: left;
+}
+
+.menu-item:hover,
+.home-btn:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.side-nav {
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    top: 0;
+    overflow-x: hidden;
+    padding: 20px 8px 0 8px;
+}
+
+h1:hover,
+.side-nav a:hover {
+    color: white;
+}
+
+main {
+    margin-left: 180px;
+    height: 100vh;
+}
+
+.intro {
+    display: none;
+}
+
+.intro.active {
+    display: block;
+}
+
+.content {
+    height: 100vh;
+}
+
+object {
+    width: 100%;
+    height: 100%;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.title-container:hover {
+    color: white;
+}
+
+.title-container>* {
+    pointer-events: none;
+}
+
+.title-container span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-items-container {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    transform-origin: top;
+    overflow-y: scroll;
+    transition: height .3s ease-in;
+}
+
+.menu-items-container.active {
+    height: 100px;
+    transition: height .3s ease-in;
+}
+
+/* SCROLL */
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: lightgray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: darkgray;
+}

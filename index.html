@@ -6,111 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jay Javascript</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        h2 {
-            margin-bottom: 0;
-        }
-
-        .home-btn {
-            padding: 8px 12px;
-            color: #818181;
-            background-color: #111;
-            font-size: 1.8em;
-            text-align: left;
-            border: none;
-        }
-
-        .menu-item {
-            padding: 8px 12px;
-            color: #818181;
-            background-color: #111;
-            border: none;
-            text-align: left;
-        }
-
-        .menu-item:hover,
-        .home-btn:hover {
-            cursor: pointer;
-            color: white;
-        }
-
-
-
-        .side-nav {
-            background-color: #111;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            width: 160px;
-            position: fixed;
-            top: 0;
-            overflow-x: hidden;
-            padding-top: 20px;
-            padding-left: 8px;
-        }
-
-        h1,
-        .side-nav a,
-        .side-nav h2 {
-            color: #818181;
-        }
-
-        h1:hover,
-        .side-nav a:hover {
-            color: white;
-        }
-
-        main {
-            margin-left: 168px;
-            height: 100vh;
-        }
-
-        .intro {
-            display: none;
-        }
-
-        .intro.active {
-            display: block;
-        }
-
-        .content {
-            height: 100vh;
-        }
-
-        object {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="side-nav">
         <button class="home-btn" onclick="goHome()">Home</button>
-        <h2>Buttons</h2>
-        <button class="menu-item" onclick="show('buttons','fetch')">Fetch API</button>
-        <button class="menu-item" onclick="show('buttons','changeBg')">ChangeBg</button>
-        <button class="menu-item" onclick="show('buttons', 'todo')">TODO</button>
+        <div class="title-container" onclick="displayItems(event)">
+            <h2>Buttons</h2>
+            <span>&darr;</span>
+        </div>
+        <div class="menu-items-container">
+            <button class="menu-item" onclick="show('buttons','fetch')">Fetch API</button>
+            <button class="menu-item" onclick="show('buttons','changeBg')">ChangeBg</button>
+            <button class="menu-item" onclick="show('buttons', 'todo')">TODO</button>
+        </div>
 
-        <h2>Images</h2>
-        <button class="menu-item" onclick="show('images','carousel')">Carousel</button>
-        <button class="menu-item" onclick="show('images','lightbox')">Lightbox</button>
+        <div class="title-container" onclick="displayItems(event)">
+            <h2>Images</h2>
+            <span>&darr;</span>
+        </div>
+        <div class="menu-items-container">
+            <button class="menu-item" onclick="show('images','carousel')">Carousel</button>
+            <button class="menu-item" onclick="show('images','lightbox')">Lightbox</button>
+        </div>
 
-        <h2>Menus</h2>
-        <button class="menu-item" onclick="show('menus','accordion')">Accordion</button>
-        <button class="menu-item" onclick="show('menus','tabs')">Tabs</button>
-        <button class="menu-item" onclick="show('menus','verticalTabs')">Vertical Tabs</button>
-        <button class="menu-item" onclick="show('menus','cascadingDropdown')">Dropdowns</button>
+        <div class="title-container" onclick="displayItems(event)">
+            <h2>Menus</h2>
+            <span>&darr;</span>
+        </div>
+        <div class="menu-items-container">
+            <button class="menu-item" onclick="show('menus','accordion')">Accordion</button>
+            <button class="menu-item" onclick="show('menus','tabs')">Tabs</button>
+            <button class="menu-item" onclick="show('menus','verticalTabs')">Vertical Tabs</button>
+            <button class="menu-item" onclick="show('menus','cascadingDropdown')">Dropdowns</button>
+        </div>
 
-        <h2>Other</h2>
-        <button class="menu-item" onclick="show('other','vueHelloWorld')">Vue Intro</button>
-        <button class="menu-item" onclick="show('other','modal')">Modal</button>
+        <div class="title-container" onclick="displayItems(event)">
+            <h2>Other</h2>
+            <span>&darr;</span>
+        </div>
+        <div class="menu-items-container">
+            <button class="menu-item" onclick="show('other','vueHelloWorld')">Vue Intro</button>
+            <button class="menu-item" onclick="show('other','modal')">Modal</button>
+        </div>
     </div>
     <main class="main">
         <div class="intro">
@@ -118,23 +57,7 @@
         </div>
         <div class="content"></div>
     </main>
-    <script>
-        const introElement = document.getElementsByClassName('intro')[0]
-        introElement.classList.add('active')
-
-        const show = (category, fileName) => {
-            const contentElement = document.getElementsByClassName('content')[0]
-            const introElement = document.getElementsByClassName('intro')[0].classList.remove('active')
-            contentElement.innerHTML = `<iframe height="100%" width="100%" src="./${category}/${fileName}/index.html"></iframe>`
-            contentElement.classList.toggle('active')
-        }
-
-        const goHome = () => {
-            const introElement = document.getElementsByClassName('intro')[0].classList.add('active')
-            const contentElement = document.getElementsByClassName('content')[0]
-            contentElement.innerHTML = ''
-        }
-    </script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
