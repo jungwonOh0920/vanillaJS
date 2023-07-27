@@ -12,7 +12,7 @@
 <body>
     <div class="side-nav">
         <button class="home-btn" onclick="goHome()">Home</button>
-        <div class="title-container">
+        <div class="title-container" onclick="displayItems(event)">
             <h2>Buttons</h2>
             <span>&darr;</span>
         </div>
@@ -22,7 +22,7 @@
             <button class="menu-item" onclick="show('buttons', 'todo')">TODO</button>
         </div>
 
-        <div class="title-container">
+        <div class="title-container" onclick="displayItems(event)">
             <h2>Images</h2>
             <span>&darr;</span>
         </div>
@@ -31,7 +31,7 @@
             <button class="menu-item" onclick="show('images','lightbox')">Lightbox</button>
         </div>
 
-        <div class="title-container">
+        <div class="title-container" onclick="displayItems(event)">
             <h2>Menus</h2>
             <span>&darr;</span>
         </div>

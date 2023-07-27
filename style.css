@@ -78,6 +78,11 @@ object {
 .title-container {
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+}
+
+.title-container:hover {
+    color: white;
 }
 
 .title-container>* {
@@ -94,11 +99,27 @@ object {
     flex-direction: column;
     height: 0;
     transform-origin: top;
-    overflow: hidden;
+    overflow-y: scroll;
     transition: height .3s ease-in;
 }
 
 .menu-items-container.active {
     height: 100px;
     transition: height .3s ease-in;
+}
+
+/* SCROLL */
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: lightgray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: darkgray;
 }

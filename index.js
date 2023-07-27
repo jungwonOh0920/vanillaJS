@@ -15,6 +15,13 @@ const goHome = () => {
 }
 
 const displayItems = (e) => {
-    e.target.getElementsByTagName('span')[0].innerHTML = '&uarr;'
-    e.target.nextElementSibling.classList.toggle('active')
+    const menuItemContainerEl = e.target.nextElementSibling
+    menuItemContainerEl.classList.toggle('active')
+
+    if (menuItemContainerEl.classList.contains('active')) {
+        e.target.getElementsByTagName('span')[0].innerHTML = '&uarr;'
+    } else {
+        e.target.getElementsByTagName('span')[0].innerHTML = '&darr;'
+    }
+
 }
