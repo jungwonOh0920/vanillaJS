@@ -1,0 +1,43 @@
+.slideshow-gallery-container {
+    max-width: 1200px;
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.slide {
+    position: relative;
+    display: flex;
+}
+
+.slide img {
+    height: 100%;
+}
+
+.slide .left-button,
+.slide .right-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 8px 4px;
+    font-size: 32px;
+    background-color: transparent;
+    color: red;
+    cursor: pointer;
+}
+
+.slide .left-button:hover,
+.slide .right-button:hover {
+    background-color: gray;
+}
+
+.slide .left-button {
+    left: 8px;
+}
+
+.slide .right-button {
+    right: 8px;
+}
