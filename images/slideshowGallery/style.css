@@ -41,3 +41,10 @@
 .slide .right-button {
     right: 8px;
 }
+
+.slide .nav-num {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    color: orange;
+}

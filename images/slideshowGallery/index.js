@@ -11,6 +11,7 @@ const goLeft = () => {
     }
 
     slideImg.src = IMAGES[SLIDE_IMG_IDX]
+    handelNavNum()
 }
 
 const goRight = () => {
@@ -21,4 +22,10 @@ const goRight = () => {
     }
 
     slideImg.src = IMAGES[SLIDE_IMG_IDX]
+    handelNavNum()
+}
+
+const handelNavNum = () => {
+    const navNumEl = document.getElementsByClassName('nav-num')[0]
+    navNumEl.innerHTML = SLIDE_IMG_IDX + 1 + '/' + IMAGES.length
 }
