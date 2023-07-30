@@ -11,11 +11,32 @@
 <body>
     <div class="slideshow-gallery-container">
         <div class="slide">
-            <img class="slide-img" src="/assets/images/lights_wide.jpg" alt="The woods">
-            <button class="left-button" onclick="goLeft()">&lt;</button>
-            <button class="right-button" onclick="goRight()">&gt;</button>
+            <img class="slide-img" src="/assets/images/lights_wide.jpg" alt="The lights">
             <span class="nav-num">1/6</span>
         </div>
+        <div class="slide">
+            <img class="slide-img" src="/assets/images/mountains.jpg" alt="The mountains">
+            <span class="nav-num">2/6</span>
+        </div>
+        <div class="slide">
+            <img class="slide-img" src="/assets/images/nature.jpg" alt="The nature">
+            <span class="nav-num">3/6</span>
+        </div>
+        <div class="slide">
+            <img class="slide-img" src="/assets/images/snow.jpg" alt="The snow">
+            <span class="nav-num">4/6</span>
+        </div>
+        <div class="slide">
+            <img class="slide-img" src="/assets/images/terre_wide.jpeg" alt="The terre wide">
+            <span class="nav-num">5/6</span>
+        </div>
+        <div class="slide">
+            <img class="slide-img" src="/assets/images/woods_wide.jpeg" alt="The woods">
+            <span class="nav-num">6/6</span>
+        </div>
+        <button class="left-button" onclick="rotateSlide(-1)">&lt;</button>
+        <button class="right-button" onclick="rotateSlide(1)">&gt;</button>
+        <p class="desc"></p>
     </div>
     <script src="./index.js"></script>
 </body>
