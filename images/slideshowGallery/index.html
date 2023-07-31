@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="slideshow-gallery-container">
+        <div class="slides-container" id="slides-container">
+            <div class="slide">
+                <img class="slide-img" src="/assets/images/lights_wide.jpg" alt="The lights">
+                <span class="nav-num">1/6</span>
+            </div>
+            <div class="slide">
+                <img class="slide-img" src="/assets/images/mountains.jpg" alt="The mountains">
+                <span class="nav-num">2/6</span>
+            </div>
+            <div class="slide">
+                <img class="slide-img" src="/assets/images/nature.jpg" alt="The nature">
+                <span class="nav-num">3/6</span>
+            </div>
+            <div class="slide">
+                <img class="slide-img" src="/assets/images/snow.jpg" alt="The snow">
+                <span class="nav-num">4/6</span>
+            </div>
+            <div class="slide">
+                <img class="slide-img" src="/assets/images/terre_wide.jpeg" alt="The terre wide">
+                <span class="nav-num">5/6</span>
+            </div>
+            <div class="slide">
+                <img class="slide-img" src="/assets/images/woods_wide.jpeg" alt="The woods">
+                <span class="nav-num">6/6</span>
+            </div>
+            <button class="left-button" onclick="rotateSlide(-1)">&lt;</button>
+            <button class="right-button" onclick="rotateSlide(1)">&gt;</button>
+        </div>
+        <p class="desc"></p>
+        <div class="gallery">
+            <div class="slide" onclick="activateSlide(0)">
+                <img class="slide-img" src="/assets/images/lights_wide.jpg" alt="The lights">
+            </div>
+            <div class="slide" onclick="activateSlide(1)">
+                <img class="slide-img" src="/assets/images/mountains.jpg" alt="The mountains">
+            </div>
+            <div class="slide" onclick="activateSlide(2)">
+                <img class="slide-img" src="/assets/images/nature.jpg" alt="The nature">
+            </div>
+            <div class="slide" onclick="activateSlide(3)">
+                <img class="slide-img" src="/assets/images/snow.jpg" alt="The snow">
+            </div>
+            <div class="slide" onclick="activateSlide(4)">
+                <img class="slide-img" src="/assets/images/terre_wide.jpeg" alt="The terre wide">
+            </div>
+            <div class="slide" onclick="activateSlide(5)">
+                <img class="slide-img" src="/assets/images/woods_wide.jpeg" alt="The woods">
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

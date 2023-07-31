@@ -1,4 +1,4 @@
-const IMG_SOURCES = ['./images/img_lights_wide.jpg', './images/img_mountains.jpg', './images/img_nature.jpg', './images/img_snow.jpg']
+const IMG_SOURCES = ['/assets/images/lights_wide.jpg', '/assets/images/mountains.jpg', '/assets/images/nature.jpg', '/assets/images/snow.jpg']
 const images = document.getElementsByClassName('img')
 
 let imageIdx = 0
