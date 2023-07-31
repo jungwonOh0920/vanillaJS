@@ -10,7 +10,7 @@ const rotateSlide = (num) => {
     if (SLIDE_IMG_IDX < 0) {
         SLIDE_IMG_IDX = IMAGES.length - 1
     }
-    activeSlide(SLIDE_IMG_IDX)
+    activateSlide(SLIDE_IMG_IDX)
     handelNavNum()
 }
 
@@ -19,14 +19,19 @@ const handelNavNum = () => {
     navNumEl.innerHTML = SLIDE_IMG_IDX + 1 + '/' + IMAGES.length
 }
 
-const activeSlide = (idx) => {
-    const SLIDES = document.getElementsByClassName('slide')
+const activateSlide = (idx) => {
+    const slidesEle = document.getElementById('slides-container').getElementsByClassName('slide')
+    const descEle = document.getElementsByClassName('desc')[0]
+    const gallerySlidesEle = document.getElementsByClassName('gallery')[0].children
 
-    for (let i = 0; i < SLIDES.length; i++) {
-        SLIDES[i].classList.remove('active')
+    for (let i = 0; i < slidesEle.length; i++) {
+        slidesEle[i].classList.remove('active')
+        gallerySlidesEle[i].classList.remove('active')
     }
 
-    SLIDES[idx].classList.add('active')
+    slidesEle[idx].classList.add('active')
+    descEle.innerHTML = slidesEle[idx].children[0].alt
+    gallerySlidesEle[idx].classList.add('active')
 }
 
-activeSlide(0)
+activateSlide(0)
