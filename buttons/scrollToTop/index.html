@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .content {
+            padding: 30px 30px 2500px;
+            background-color: lightgray;
+        }
+
+        .myBtn {
+            padding: 15px 20px;
+            background-color: red;
+            border: none;
+            cursor: pointer;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            display: none;
+        }
+
+        .myBtn.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h1>Header</h1>
+        </div>
+        <div class="content">
+            <p>
+                This example demonstrates how to create a "scroll to top" button that becomes visible when the user
+                starts to scroll the page.
+            </p>
+            <button onclick="handleClick()" class="myBtn">Top</button>
+
+        </div>
+    </div>
+    <script>
+        const handleClick = () => {
+            document.documentElement.scrollTop = 0
+        }
+
+        window.onscroll = () => {
+            if (document.documentElement.scrollTop > 30) {
+                document.getElementsByClassName('myBtn')[0].classList.add('active')
+            } else {
+                document.getElementsByClassName('myBtn')[0].classList.remove('active')
+            }
+        }
+    </script>
+</body>
+
+</html>
