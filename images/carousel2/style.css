@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    border: 2.5px solid blue;
+    overflow-x: scroll;
+    position: relative;
+}
+
+.item {
+    width: 200px;
+    height: 250px;
+    background-color: red;
+    margin-right: 4px;
+    flex-shrink: 0;
+}
+
+
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    height: 100%;
+    padding: 0 14px 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: pointer;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
