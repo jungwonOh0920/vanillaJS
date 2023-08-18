@@ -1,25 +1,34 @@
-const innerContainerEle = document.getElementsByClassName('inner-container')[0]
-const goLeft = () => {
-    innerContainerEle.scrollLeft -= 1000;
-    handleArrows()
-}
+const handleScroll = () => {
+    const innerContainerEl = document.getElementsByClassName('inner-container')[0]
+    const leftBtnEl = document.getElementsByClassName('left-btn')[0]
+    const rightBtnEl = document.getElementsByClassName('right-btn')[0]
+    console.log('scrollLeft', innerContainerEl.scrollLeft);
+    console.log('scrollWidth: ', innerContainerEl.scrollWidth);
+    console.log('clientWidth: ', innerContainerEl.clientWidth);
 
-const goRight = () => {
-    innerContainerEle.scrollLeft += 1000;
-    handleArrows()
-}
-
-const handleArrows = () => {
-    const innerContainerEle = document.getElementsByClassName('inner-container')[0]
-    console.log(innerContainerEle.scrollLeft)
-
-    if (innerContainerEle.scrollLeft >= 1000 && innerContainerEle.scrollLeft < 2000) {
-        document.getElementsByClassName('left-arrow')[0].classList.remove('hidden')
-    } else if (innerContainerEle.scrollLeft === 0) {
-        document.getElementsByClassName('left-arrow')[0].classList.add('hidden')
-    } else if (innerContainerEle.scrollLeft >= 2995) {
-        document.getElementsByClassName('right-arrow')[0].classList.add('hidden')
-    } else if (innerContainerEle.scrollLeft < 2995 && innerContainerEle.scrollLeft >= 0) {
-        document.getElementsByClassName('right-arrow')[0].classList.remove('hidden')
+    // Left Btn
+    if (innerContainerEl.scrollLeft > 0) {
+        leftBtnEl.classList.add('active')
+    } else if (innerContainerEl.scrollLeft === 0) {
+        leftBtnEl.classList.remove('active')
     }
+
+    // Right Btn
+    // far right
+    if (innerContainerEl.scrollLeft === innerContainerEl.scrollWidth - innerContainerEl.clientWidth) {
+        rightBtnEl.classList.remove('active')
+    } else {
+        rightBtnEl.classList.add('active')
+    }
+}
+
+const handleLeft = () => {
+    const innerContainerEl = document.getElementsByClassName('inner-container')[0]
+    innerContainerEl.scrollLeft -= 1000
+}
+
+const handleRight = () => {
+    const innerContainerEl = document.getElementsByClassName('inner-container')[0]
+
+    innerContainerEl.scrollLeft += 1000
 }
